@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Case study of the Smart Parking Search App, detailing the problem, solution, process, and results.">
+  <meta name="keywords" content="Smart Parking, UX/UI Design, Case Study, Urban Mobility, App Development">
+  <!-- Open Graph Tags for Social Media Sharing -->
+  <meta property="og:title" content="Smart Parking App Case Study">
+  <meta property="og:description" content="Revolutionizing the way drivers find and pay for parking, enhancing urban mobility and reducing congestion.">
+  <meta property="og:image" content="path-to-your-image.jpg">
+  <meta property="og:url" content="https://yourportfolio.com/swapark">
+  <meta property="og:type" content="website">
+  <title>Smart Parking App Case Study</title>
+  
+  <!-- Fonts + CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="swapark.css">
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js" defer></script>
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  
+  <!-- Custom JS -->
+  <script src="swapark.js" defer></script>
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="loader"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="Swapark.svg" alt="Swapark Logo">
+      </a>
+      <button class="menu-toggle" aria-label="Toggle Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#problem">The Problem</a></li>
+        <li><a href="#solution">The Solution</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#flows">flows</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home" class="home-section">
+      <div class="container">
+        <h1>Smart Parking App Case Study</h1>
+        <p>Revolutionizing the way drivers find and pay for parking, enhancing urban mobility and reducing congestion.</p>
+        <div class="cta-buttons">
+          <a href="#flows" class="btn primary-btn">Open Case Study </a>
+          <a href="#contact" class="btn secondary-btn"> Explore UI</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem-section">
+      <div class="container">
+        <h2>The Problem</h2>
+        <p>Drivers spend excessive time searching for parking spots, leading to increased traffic congestion, fuel consumption, and frustration.</p>
+        <img src="park.webp" alt="Traffic Congestion Illustration" loading="lazy" class="problem-image">
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+   
+
+    <!-- Our Process Section -->
+    <section id="process" class="process-section">
+      <div class="container">
+        <h2>Our Process</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Research & Discovery</h3>
+              <p>Understanding user needs and market analysis.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Design & Prototyping</h3>
+              <p>Creating intuitive and user-friendly interfaces.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h3>Development & Testing</h3>
+              <p>Building robust features and ensuring quality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Research & Insights Section -->
+    <section id="research" class="research-section">
+      <div class="container">
+        <h2>Research & Insights</h2>
+        <div class="research-content">
+          <div class="chart-container">
+            <canvas id="question1Chart"></canvas>
+          </div>
+          <div class="chart-container">
+            <canvas id="question2Chart"></canvas>
+          </div>
+          <div class="chart-container">
+            <canvas id="question3Chart"></canvas>
+          </div>
+          <div class="chart-container">
+            <canvas id="question4Chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+      <div class="container">
+        <h2>Portfolio</h2>
+        <p>Discover our diverse range of projects that showcase our expertise in UX/UI design and development.</p>
+        <div class="portfolio-grid">
+          <!-- Example Portfolio Item -->
+          <div class="portfolio-item">
+            <img src="project1.jpg" alt="Project 1" loading="lazy">
+            <h3>Project Title</h3>
+            <p>Brief description of the project.</p>
+            <a href="#" class="btn view-project-btn">View Project</a>
+          </div>
+          <!-- Repeat for more projects -->
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Personas Section -->
+    <section id="personas" class="personas-section">
+      <div class="container">
+        <h2>User Personas</h2>
+        <p>Understanding our users to tailor the app to their needs and preferences.</p>
+        <div class="personas-grid">
+          <div class="persona">
+            <img src="persona1.png" alt="Busy Commuter" loading="lazy">
+            <h3>Busy Commuter</h3>
+            <ul>
+              <li><strong>Goals:</strong> Quick parking, low cost, easy payment.</li>
+              <li><strong>Frustrations:</strong> Traffic jams, complex apps, high prices.</li>
+              <li><strong>Motivation:</strong> Arrive at work on time without stress.</li>
+            </ul>
+          </div>
+          <div class="persona">
+            <img src="persona2.png" alt="Occasional Driver" loading="lazy">
+            <h3>Occasional Driver</h3>
+            <ul>
+              <li><strong>Goals:</strong> Simple sign-up, occasional use.</li>
+              <li><strong>Frustrations:</strong> Too many steps, advanced settings.</li>
+              <li><strong>Motivation:</strong> Hassle-free parking when needed.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="solution" class="solution-section">
+      <div class="container">
+        <h2>The Solution</h2>
+        <p>Introducing the Smart Parking Search App—a seamless platform connecting drivers with available parking spots in real-time, simplifying the parking experience.</p>
+        <div class="solution-features">
+          <div class="feature">
+            <h3>Real-Time Availability</h3>
+            <p>Instantly locate available parking spots with up-to-date information.</p>
+          </div>
+          <div class="feature">
+            <h3>In-App Payments</h3>
+            <p>Secure and convenient payment options within the app.</p>
+          </div>
+          <div class="feature">
+            <h3>User Ratings</h3>
+            <p>Reliable reviews to ensure quality and safety.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wireframes & Mockups Section -->
+    <section id="wireframes" class="wireframes-section">
+      <div class="container">
+        <h2>Wireframes & Mockups</h2>
+        <p>Exploring the design process from initial concepts to polished high-fidelity mockups.</p>
+        <div class="wireframes-content">
+          
+          <!-- Wireframe: Figma Embed -->
+          <div class="wireframe-item">
+            <div class="wireframe-preview">
+              <iframe 
+                style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: 10px;" 
+                width="100%" height="450" 
+                src="https://embed.figma.com/board/if6bgi8bA6qqmrNA2Hm4cx/Swapark-Uesr-Flows?node-id=0-1&embed-host=share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            <h3>Initial Wireframes</h3>
+            <p>Early layout and user flow designs that set the foundation for the final product.</p>
+          </div>
+          
+          <!-- High-Fidelity Mockup -->
+          <div class="wireframe-item">
+            <div class="wireframe-preview">
+              <img src="mockup1.svg" alt="High-Fidelity Mockup" loading="lazy" class="responsive-image">
+            </div>
+            <h3>High-Fidelity Mockup</h3>
+            <p>A polished interface showcasing the final design and user experience.</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section id="challenges" class="challenges-section">
+      <div class="container">
+        <h2>Challenges & Solutions</h2>
+        <div class="challenge-item">
+          <div class="flow-video">
+            <h3>Smart Parking Search Engine</h3>
+            <p><strong>Solution:</strong> Designed and implemented an intuitive 4-screen flow to streamline the parking search process, reducing user effort and saving time.</p>
+            <div class="video-row">
+              <video src="flows-1.mov" autoplay loop muted playsinline></video>
+              <video src="flows-2.mov" autoplay loop muted playsinline></video>
+            </div>
+            <p class="flow-caption">Effortless parking search flow in action</p>
+          </div>
+        </div>
+        </div>
+        <div class="challenge-item">
+          <div class="flow-video">
+          <h3>Complex Payment Process</h3>
+          <p><strong>Solution:</strong> Developed a clear, step-by-step payment flow with progress indicators and secure options.</p>
+          <video src="flows-3.mov" autoplay loop muted playsinline></video>
+            <p class="flow-caption">Parking Spot Selection</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results-section">
+      <div class="container">
+        <h2>Results</h2>
+        <p>Post-launch metrics demonstrating the success and impact of the Smart Parking Search App.</p>
+        <div class="results-grid">
+          <div class="result-item">
+            <h3>30% Reduction in Search Time</h3>
+            <p>Users spent significantly less time finding parking spots.</p>
+          </div>
+          <div class="result-item">
+            <h3>Increase in User Satisfaction</h3>
+            <p>User feedback highlighted improved parking experiences.</p>
+          </div>
+          <div class="result-item">
+            <h3>Boost in App Downloads</h3>
+            <p>Rapid growth in user base and active engagement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusion Section -->
+    <section id="conclusion" class="conclusion-section">
+      <div class="container">
+        <h2>Conclusion</h2>
+        <p>The Smart Parking Search App successfully addressed key parking challenges, enhancing urban mobility and user satisfaction.</p>
+      </div>
+    </section>
+
+    <!-- Lessons Learned Section -->
+    <section id="lessons" class="lessons-section">
+      <div class="container">
+        <h2>Lessons Learned & Next Steps</h2>
+        <p>Reflecting on the project, we plan to introduce new features, expand to additional markets, and continue user testing for iterative improvements.</p>
+      </div>
+    </section>
+
+    <!-- Flows Section -->
+    <section id="flows" class="flows-section">
+      <div class="container">
+        <h2>User Flows</h2>
+        <div class="flow-videos-container">
+          <div class="flow-video">
+            <video src="flows-1.mov" autoplay loop muted playsinline></video>
+            <p class="flow-caption">Onboarding Process</p>
+          </div>
+          <div class="flow-video">
+            <video src="flows-2.mov" autoplay loop muted playsinline></video>
+            <p class="flow-caption">Payment Flow</p>
+          </div>
+          <div class="flow-video">
+            <video src="flows-3.mov" autoplay loop muted playsinline></video>
+            <p class="flow-caption">Parking Spot Selection</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screens Section -->
+    <section id="screens" class="screens-section">
+      <div class="container">
+        <h2>App Screens</h2>
+        <p>Explore the key screens of our Smart Parking Search application.</p>
+        <div class="screens-grid">
+          <img src="1.svg" alt="Home Screen" loading="lazy">
+          <img src="2.svg" alt="Search Screen" loading="lazy">
+          <img src="3.svg" alt="Select Parking Screen" loading="lazy">
+          <img src="4.svg" alt="Payment Screen" loading="lazy">
+          <img src="5.svg" alt="Confirmation Screen" loading="lazy">
+          <img src="6.svg" alt="User Profile Screen" loading="lazy">
+          <img src="7.svg" alt="Settings Screen" loading="lazy">
+          <img src="8.svg" alt="Notifications Screen" loading="lazy">
+          <img src="9.svg" alt="Feedback Screen" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <form class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+  
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#" class="footer-link">LinkedIn</a>
+      <a href="#" class="footer-link">GitHub</a>
+      <a href="#" class="footer-link">Dribbble</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Daniel Gur Arye - UX/UI Designer Portfolio showcasing digital experiences and design solutions"/>
+    <title>Daniel Gur Arye • UX/UI Designer</title>
+    
+    <!-- Fonts + CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js" defer></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    
+    <!-- Custom JS -->
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-text" aria-label="Loading">LOADING</div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <nav>
+            <a href="#hero" class="logo" tabindex="0" role="button" aria-label="Home">
+                DANIEL GUR ARYE
+            </a>
+
+            <!-- Hamburger Button (Visible on Small Screens) -->
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" 
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" role="navigation">
+                <li><a href="#hero" class="nav-item" tabindex="0">Home</a></li>
+                <li><a href="#projects" class="nav-item" tabindex="0">Work</a></li>
+                <li><a href="#about" class="nav-item" tabindex="0">About</a></li>
+                <li><a href="#skills" class="nav-item" tabindex="0">Skills</a></li>
+                <li><a href="#testimonials" class="nav-item" tabindex="0">Testimonials</a></li>
+                <li><a href="#user-flows" class="nav-item" tabindex="0">User Flows</a></li>
+                <li><a href="#contact" class="nav-item" tabindex="0">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1>Crafting Digital Experiences Through Design</h1>
+                <p>UX/UI Designer specializing in creating intuitive and engaging digital solutions that enhance user experiences.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary-btn">Explore My Work</a>
+                    <a href="#contact" class="btn secondary-btn">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section" aria-label="Featured Projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">A selection of my recent work</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <article class="project-card" id="project-swapark">
+                        <div class="project-image">
+                            <img src="/section.png" alt="Swapark Case Study Interface" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Swapark Case Study</h3>
+                            <p class="project-description">
+                                A mobile app for city dwellers, offering curated cultural spots and local events, 
+                                optimized for a streamlined user journey and real-time community updates.
+                            </p>
+                            <div class="project-tags" aria-label="Project categories">
+                                <span class="project-tag">UX/UI Design</span>
+                                <span class="project-tag">Mobile App</span>
+                                <span class="project-tag">Local Culture</span>
+                            </div>
+                            <a href="swapark.html" class="view-project-btn" data-project="swapark">
+                                View Project
+                                <span class="visually-hidden">: Swapark Case Study</span>
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article class="project-card" id="project-greenshop">
+                        <div class="project-image">
+                            <img src="green-shop.jpg" alt="Green Shop E-commerce Interface" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Green Shop</h3>
+                            <p class="project-description">
+                                An eco-friendly e-commerce platform focusing on sustainability, 
+                                with an emphasis on user engagement and conversion-oriented UI.
+                            </p>
+                            <div class="project-tags" aria-label="Project categories">
+                                <span class="project-tag">UX/UI Design</span>
+                                <span class="project-tag">E-commerce</span>
+                                <span class="project-tag">Sustainability</span>
+                            </div>
+                            <a href="green-shop.html" class="view-project-btn" data-project="greenshop">
+                                View Project
+                                <span class="visually-hidden">: Green Shop</span>
+                                <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Add more Project Cards as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-content-wrapper">
+                    <div class="about-image">
+                        <img src="dada.jpg" alt="Daniel Gur Arye Profile Photo" loading="lazy">
+                    </div>
+                    <div class="about-content">
+                        <h2 class="about-title">About Me</h2>
+                        <p class="about-text">
+                            I'm Daniel Gur Arye, a UX/UI Designer driven by curiosity and a deep passion
+                            for crafting exceptional digital experiences. Over the years, I've specialized
+                            in creating user-centric interfaces that balance aesthetics, usability, and 
+                            technical feasibility.
+                            <br><br>
+                            I believe in continuous learning, iterative design processes, and thoughtful 
+                            collaboration with stakeholders to deliver products that truly resonate with 
+                            end-users. Beyond pixels and wireframes, I enjoy merging creativity with 
+                            strategic thinking to elevate brands in the digital landscape.
+                            <br><br>
+                            When I'm not designing, I spend my time exploring new technologies, refining 
+                            my animation skills with GSAP, and engaging with design communities to share 
+                            insights and learn from others. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Tools Section -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Skills & Tools</h2>
+                    <p class="section-subtitle">From wireframes to high-fidelity prototypes</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">💡</div>
+                        <h3 class="skill-title">UX Research</h3>
+                        <p>Empathy mapping, user interviews, persona creation.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">⚙️</div>
+                        <h3 class="skill-title">Prototyping</h3>
+                        <p>Rapid prototyping with Figma, Sketch, Adobe XD.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h3 class="skill-title">UI Design</h3>
+                        <p>Clean, modern interfaces aligned with brand identity.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">🚀</div>
+                        <h3 class="skill-title">Animation</h3>
+                        <p>Engaging micro-interactions and transitions with GSAP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What People Say</h2>
+                    <p class="section-subtitle">Feedback from collaborators and clients</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "Daniel's attention to detail and user-centric approach helped our product stand out.
+                            The final design was both beautiful and functional!"
+                        </p>
+                        <p class="testimonial-author">- Sarah W, Product Manager</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "Working with Daniel was a pleasure. He quickly grasped our goals and delivered beyond our expectations."
+                        </p>
+                        <p class="testimonial-author">- Jonathan D, Startup Founder</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">
+                            "The animations added a sense of delight to our app. Daniel's design approach truly shines in the final product."
+                        </p>
+                        <p class="testimonial-author">- Emily R, Creative Director</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Flows Section -->
+        <!-- <section id="user-flows" class="user-flows-section" aria-label="User Flows">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">User Flows</h2>
+                    <p class="section-subtitle">Visual representations of user interactions</p>
+                </div>
+                <div class="flow-videos-container">
+                    <div class="flow-video">
+                        <video src="flows-1.mov" autoplay loop muted playsinline></video>
+                        <p class="flow-caption">Onboarding Process</p>
+                    </div>
+                    <div class="flow-video">
+                        <video src="flows-2.mov" autoplay loop muted playsinline></video>
+                        <p class="flow-caption">Payment Flow</p>
+                    </div>
+                    <div class="flow-video">
+                        <video src="flows-3.mov" autoplay loop muted playsinline></video>
+                        <p class="flow-caption">Parking Spot Selection</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Contact</h2>
+                <form class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">© 2025 Daniel Gur Arye. All Rights Reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.instagram.com" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.behance.net" class="footer-link" target="_blank" rel="noopener">Behance</a>
+        </div>
+    </footer>
+</body>
+</html>
